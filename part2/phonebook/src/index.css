@@ -1,0 +1,33 @@
+body {
+    background-color: bisque;
+}
+
+h2 {
+    color: #007c76;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+}
+
+li>button {
+    margin: 10px;
+}
+
+.error {
+    color: red;
+    /* background: rgb(170, 170, 170); */
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    /* background: rgb(170, 170, 170); */
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
