@@ -38,7 +38,7 @@ const App = () => {
           setNewName('')
           setNewNum('')
         }).catch(error=>{
-          console.log(error)
+          console.log("UPDATED::",error)
           setMsg({
             message:`Information of ${newName} has already been removed from server.`,
             type:"error"
@@ -50,10 +50,22 @@ const App = () => {
       }
     }else{
       phoneService.newPerson({name:newName,number:newNum,}).then(newObj => {
+
         setPersons(persons.concat(newObj))
         setMsg({
           message:`Information of ${newName} has  been added to the server.`,
           type:"success"
+        })
+        setTimeout(() => {
+          setMsg({})
+        }, 5000)
+        setNewName('')
+        setNewNum('')
+      }).catch(error=>{
+        // console.log("NEW ADDED ERR::",error.response);
+        setMsg({
+          message:`${error.response.data.error}`,
+          type:"error"
         })
         setTimeout(() => {
           setMsg({})
