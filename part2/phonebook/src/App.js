@@ -1,6 +1,4 @@
-// import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-// import axios  from 'axios'
 import phoneService from './services/phonebook'
 import PersonForm from './components/PersonForm'
 import Filter from './components/Filter'
