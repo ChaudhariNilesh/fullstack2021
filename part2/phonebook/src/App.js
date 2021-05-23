@@ -62,7 +62,6 @@ const App = () => {
         setNewName('')
         setNewNum('')
       }).catch(error=>{
-        // console.log("NEW ADDED ERR::",error.response);
         setMsg({
           message:`${error.response.data.error}`,
           type:"error"
