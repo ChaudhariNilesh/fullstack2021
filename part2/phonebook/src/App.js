@@ -40,7 +40,7 @@ const App = () => {
         }).catch(error=>{
           console.log("UPDATED::",error)
           setMsg({
-            message:`Information of ${newName} has already been removed from server.`,
+            message: error.response.data.error,
             type:"error"
           })
           setTimeout(() => {
@@ -83,7 +83,7 @@ const App = () => {
       }).catch(error=>{
         console.log(error)
         setMsg({
-          message:`Information of ${newName} has already been removed from server.`,
+          message:error.response.data.error,
           type:"error"
         })
         setTimeout(() => {
